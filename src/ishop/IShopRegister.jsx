@@ -56,7 +56,6 @@ const IShopRegister = () => {
                   regMobile: "",
                   regPassword: "",
                   regConfirmPassword: "",
-                  regSubscription: "",
                 }}
                 validationSchema={RegisterErrorMessagesSchema}
                 onSubmit={(value) => {
@@ -64,7 +63,7 @@ const IShopRegister = () => {
                 //   alert(JSON.stringify(value));
                 RegisterArray.push(JSON.stringify(value))
                 setCookie("registerUsers", RegisterArray)
-                //   localStorage.setItem("registerUsers", JSON.stringify(value));
+                  localStorage.setItem("registerUsers", JSON.stringify(value));
                   navigate("/login");
                 }}
               >
